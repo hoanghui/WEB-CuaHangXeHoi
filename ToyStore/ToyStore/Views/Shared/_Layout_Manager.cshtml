@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Dashio - Bootstrap Admin Template</title>
+
+    <!-- Favicons -->
+    <link href="~/Assets/imagasManager/favicon.png" rel="icon">
+    <link href="~/Assets/imagasManager/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Assets/libManager/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--external css-->
+    <link href="~/Assets/libManager/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Assets/cssManager/zabuto_calendar.css" rel="stylesheet" />
+    <link href="~/Assets/libManager/gritter/css/jquery.gritter.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/Assets/cssManager/style-responsive.css" rel="stylesheet" />
+    <link href="~/Assets/cssManager/style.css" rel="stylesheet" />
+
+    <!-- =======================================================
+      Template Name: Dashio
+      Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+      Author: TemplateMag.com
+      License: https://templatemag.com/license/
+    ======================================================= -->
+</head>
+
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+            TOP BAR CONTENT & NOTIFICATIONS
+            *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>SUPER<span>XE</span></b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+
+            </div>
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="/Signin/Index">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+            MAIN SIDEBAR MENU
+            *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="profile.html"><img src="~/Assets/imagasManager/friends/fr-04.jpg" class="img-circle" width="80"></a></p>
+                    <h5 class="centered">
+                        Tên quản lý
+                    </h5>
+                    @*<li class="mt">
+                            <a class="active" href="index.html">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Cá nhân</span>
+                            </a>
+                        </li>*@
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-desktop"></i>
+                            <span><b>Khách hàng</b></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="general.html">General</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="panels.html">Panels</a></li>
+                            <li><a href="font_awesome.html">Font Awesome</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-cogs"></i>
+                            <span><b>Sản phẩm</b></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="grids.html">Grids</a></li>
+                            <li><a href="calendar.html">Calendar</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="todo_list.html">Todo List</a></li>
+                            <li><a href="dropzone.html">Dropzone File Upload</a></li>
+                            <li><a href="inline_editor.html">Inline Editor</a></li>
+                            <li><a href="file_upload.html">Multiple File Upload</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span><b>Hóa đơn</b></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="blank.html">Blank Page</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="lock_screen.html">Lock Screen</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="pricing_table.html">Pricing Table</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="500.html">500 Error</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    @RenderBody()
+                    <!-- /row -->
+                    <!-- /row -->
+                </div>
+                </div>
+                <!-- /row -->
+            </section>
+        </section>
+        <!--main content end-->
+        <footer class="site-footer">
+            <div class="text-center">
+                <p>
+                    &copy; Copyrights <strong>SUPERXE</strong>. All Rights Reserved
+                </p>
+                <div class="credits">
+
+                    Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+                </div>
+                <a href="index.html#" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="~/Assets/libManager/jquery/jquery.min.js"></script>
+
+    <script src="~/Assets/libManager/bootstrap/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="~/Assets/libManager/jquery.scrollTo.min.js"></script>
+    <script src="~/Assets/libManager/jquery.nicescroll.js"></script>
+    <script src="~/Assets/libManager/jquery.sparkline.js"></script>
+    <!--common script for all pages-->
+    <script src="lib/common-scripts.js"></script>
+    <script type="text/javascript" src="lib/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="lib/gritter-conf.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var unique_id = $.gritter.add({
+                // (string | mandatory) the heading of the notification
+                title: 'Welcome to Dashio!',
+                // (string | mandatory) the text inside the notification
+                text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
+                // (string | optional) the image to display on the left
+                image: 'img/ui-sam.jpg',
+                // (bool | optional) if you want it to fade out on its own or just sit there
+                sticky: false,
+                // (int | optional) the time you want it to be alive for before fading out
+                time: 8000,
+                // (string | optional) the class name you want to apply to that specific message
+                class_name: 'my-sticky-class'
+            });
+
+            return false;
+        });
+    </script>
+    <script type="application/javascript">
+        $(document).ready(function() {
+          $("#date-popover").popover({
+            html: true,
+            trigger: "manual"
+          });
+          $("#date-popover").hide();
+          $("#date-popover").click(function(e) {
+            $(this).hide();
+          });
+
+          $("#my-calendar").zabuto_calendar({
+            action: function() {
+              return myDateFunction(this.id, false);
+            },
+            action_nav: function() {
+              return myNavFunction(this.id);
+            },
+            ajax: {
+              url: "show_data.php?action=1",
+              modal: true
+            },
+            legend: [{
+                type: "text",
+                label: "Special event",
+                badge: "00"
+              },
+              {
+                type: "block",
+                label: "Regular event",
+              }
+            ]
+          });
+        });
+
+        function myNavFunction(id) {
+          $("#date-popover").hide();
+          var nav = $("#" + id).data("navigation");
+          var to = $("#" + id).data("to");
+          console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+        }
+    </script>
+</body>
+
+</html>
