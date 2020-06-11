@@ -130,6 +130,9 @@ D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\roslyn\VBCSCompiler.exe
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\roslyn\VBCSCompiler.exe.config
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Antlr3.Runtime.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityFramework.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityFramework.SqlServer.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityModels.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Microsoft.Web.Infrastructure.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Newtonsoft.Json.dll
@@ -140,7 +143,14 @@ D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\System.Web.WebPages.Deployment.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\System.Web.WebPages.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\System.Web.WebPages.Razor.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\ViewModels.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\WebGrease.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityModels.pdb
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityModels.dll.config
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\ViewModels.pdb
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\ViewModels.dll.config
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityFramework.xml
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\EntityFramework.SqlServer.xml
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\System.Web.Helpers.xml
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\System.Web.Mvc.xml
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\System.Web.Optimization.xml
@@ -151,8 +161,8 @@ D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Newtonsoft.Json.xml
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Antlr3.Runtime.pdb
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csprojAssemblyReference.cache
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CoreCompileInputs.cache
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CopyComplete
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.pdb
-D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csprojAssemblyReference.cache
