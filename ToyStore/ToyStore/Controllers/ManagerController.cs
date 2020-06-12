@@ -18,6 +18,29 @@ namespace ToyStore.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(AccountViewModel a)
+        {
+            var list = (from s in _context.QuanLy
+                        where (a.TenQuanLy == s.TenQuanLy && a.PassQuanLy == s.PassQuanLy)
+                        select s.TenQuanLy
+                        ).ToList();
+
+            if (a.TenQuanLy != null && a.PassQuanLy != null)
+            {
+                if (list.Count() == 1)
+                {
+                    ViewBag.Name = a.TenQuanLy.ToString();
+                    return View("Home");                }
+            }
+            return View("Index");
+        }
+
+        public ActionResult Home()
+        {
+            return View();
+        }
+
         public ActionResult Customers()
         {
             var list = (from s in _context.KhachHang
@@ -35,14 +58,14 @@ namespace ToyStore.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+           return View();
         }
         [HttpPost]
         public ActionResult Create(CustomerViewModel c)
         {
             if ( c.HoTenKhachHang != null || c.NgaySinh != null || c.DiaChi != null)
             {
-                var kh = new KhachHang
+                    var kh = new KhachHang
                 {
                     MaKhachHang = c.MaKhachHang,
                     HoTenKhachHang = c.HoTenKhachHang,

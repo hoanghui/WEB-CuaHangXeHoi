@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace ViewModels
 {
-    class AccountViewModel
+    public class AccountViewModel
     {
-        public int TenQuanLy { get; set; }
-        [Display(Name = "Tên đăng nhập")]
+        [Required,Display(Name = "Tên đăng nhập")]
+        public string TenQuanLy { get; set; }
 
-        public string MatKhau { get; set; }
+        [Required,Display(Name = "Mật khẩu")]
+        public string PassQuanLy { get; set; }
     }
 }
