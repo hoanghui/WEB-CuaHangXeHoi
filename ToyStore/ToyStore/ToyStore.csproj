@@ -242,6 +242,8 @@
     <Content Include="Assets\imagasManager\login_bg.jpg" />
     <Content Include="Assets\imagasManager\lorde.jpg" />
     <Content Include="Assets\imagasManager\mask.png" />
+    <Content Include="Assets\imagasManager\mer-bg.jpg" />
+    <Content Include="Assets\imagasManager\mercedes_benz_s_63_amg_4k-HD.jpg" />
     <Content Include="Assets\imagasManager\ny.jpg" />
     <Content Include="Assets\imagasManager\portfolio\port01.jpg" />
     <Content Include="Assets\imagasManager\portfolio\port02.jpg" />
@@ -551,6 +553,7 @@
     <Content Include="Views\Manager\Customers.cshtml" />
     <Content Include="Views\Manager\Create.cshtml" />
     <Content Include="Views\Manager\Home.cshtml" />
+    <Content Include="Views\Manager\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

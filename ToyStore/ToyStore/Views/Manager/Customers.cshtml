@@ -6,7 +6,8 @@
     ViewBag.Quantity++;
 }
 <h2>Khách hàng</h2>
-<table class="table table-bordered table-hover">
+<a href="Create" class="btn btn-warning">Thêm</a>
+<table class="table table-bordered table-hover" style="margin-top:20px">
     <thead>
         <tr>
             <th>STT</th>
@@ -14,6 +15,7 @@
             <th>Họ tên</th>
             <th>Ngày sinh</th>
             <th>Địa chỉ</th>
+            <th>Thao tác</th>
         </tr>
     </thead>
     <tbody>
@@ -26,8 +28,8 @@
                 <td class="text-center">@Html.DisplayFor(p => item.NgaySinh)</td>
                 <td class="text-center">@Html.DisplayFor(p => item.DiaChi)</td>
                 <td>
-                    <a href="/Student/Edit/@item.MaKhachHang" class="btn btn-danger" style="margin-right:10px">Sửa</a>
-                    <a href="/Student/Delete/@item.MaKhachHang" id="delete" class="btn btn-info">Xóa</a>
+                    <a href="/Manager/Edit/@item.MaKhachHang" class="btn btn-danger" style="margin-right:10px">Sửa</a>
+                    <a href="/Manager/Delete/@item.MaKhachHang" id="delete" class="btn btn-info">Xóa</a>
                 </td>
                 @*<td>
                         <a href="/Student/Edit/@item.MaKhachHang" class="btn btn-danger" style="margin-right:10px">Sửa</a>
@@ -37,7 +39,7 @@
         }
     </tbody>
 </table>
-<a href="Create" class="btn btn-warning">Thêm</a>
+
 
 @*@section scripts
 {

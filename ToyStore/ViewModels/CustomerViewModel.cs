@@ -10,7 +10,7 @@ namespace ViewModels
     public class CustomerViewModel
     {
         [Display(Name ="Mã số")]
-        public int MaKhachHang { get; set; }
+        public int? MaKhachHang { get; set; }
 
         [Display(Name = "Họ tên khách hàng")]
         public string  HoTenKhachHang { get; set; }

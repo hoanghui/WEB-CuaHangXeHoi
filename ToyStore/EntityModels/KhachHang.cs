@@ -19,7 +19,7 @@ namespace EntityModels
             this.HoaDon = new HashSet<HoaDon>();
         }
     
-        public int MaKhachHang { get; set; }
+        public int? MaKhachHang { get; set; }
         public string HoTenKhachHang { get; set; }
         public Nullable<System.DateTime> NgaySinh { get; set; }
         public string DiaChi { get; set; }

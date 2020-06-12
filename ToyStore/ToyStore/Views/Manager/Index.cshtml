@@ -4,27 +4,28 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout_SignIn.cshtml";
 }
+
 @using (Html.BeginForm())
 {
-    <form class="form-login" style="opacity:0.9">
-        <h2 class="form-login-heading">đăng nhập</h2>
-        <div class="login-wrap">
+    <form class="form-login">
+        
+        <div class="login-wrap" style="background-color:#000000 ; width:36%; margin:auto; margin-top:40px; opacity:0.75; border-radius:15px">
+            <h2 class="form-login-heading" style="text-align:center; color:white; margin-bottom:40px">ĐĂNG NHẬP</h2>
             @*<input type="text" class="form-control" placeholder="Tên đăng nhập" autofocus>*@
-            @Html.LabelFor(model => model.TenQuanLy, htmlAttributes: new { @class = "control-label" })
-            @Html.EditorFor(model => model.TenQuanLy, new { htmlAttributes = new { @class = "form-control" } })
+
+            @Html.EditorFor(model => model.TenQuanLy, new { htmlAttributes = new { @class = "form-control", style = "width:300px ; margin: auto", placeholder = "Tên đăng nhập" } })
             <br>
             @*  <input type="password" class="form-control" placeholder="Mật khẩu">*@
-            @Html.LabelFor(model => model.PassQuanLy, htmlAttributes: new { @class = "control-label" })
-            @Html.EditorFor(model => model.PassQuanLy, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.PassQuanLy, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", type = "password", style = "width:300px ; margin: auto" } })
 
-            <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Ghi nhớ đăng nhập
-                <span class="pull-right">
-                    <a data-toggle="modal" href="login.html#myModal"> Quên mật khẩu ?</a>
-                </span>
-            </label>
-            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> ĐĂNG NHẬP</button>
-            <hr>
+            @*<label class="checkbox">
+            <input type="checkbox" value="remember-me"> Ghi nhớ đăng nhập
+            <span class="pull-left">
+                <a data-toggle="modal" href="login.html#myModal"> Quên mật khẩu ?</a>
+            </span>
+        </label>*@
+            <button class="btn btn-theme btn-block" type="submit" style="width:300px; margin-top:20px; margin-right: auto; margin-left: auto"><i class="fa fa-lock"></i> ĐĂNG NHẬP</button>
+            <hr style="width:300px">
 
 
         </div>

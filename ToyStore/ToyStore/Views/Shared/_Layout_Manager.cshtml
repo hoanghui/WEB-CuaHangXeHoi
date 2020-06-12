@@ -49,7 +49,7 @@
             </div>
             <div class="top-menu">
                 <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="/Signin/Index">Đăng xuất</a></li>
+                    <li><a class="logout" href="/Manager/Index">Đăng xuất</a></li>
                 </ul>
             </div>
         </header>
@@ -62,7 +62,7 @@
             <div id="sidebar" class="nav-collapse ">
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
-                    <p class="centered"><a href="profile.html"><img src="~/Assets/imagasManager/friends/fr-04.jpg" class="img-circle" width="80"></a></p>
+                    <p class="centered"><a href="profile.html"><img src="~/Assets/imagasManager/friends/fr-03.jpg" class="img-circle" width="80"></a></p>
                     <h5 class="centered">
                         @ViewBag.Name
                     </h5>
@@ -73,7 +73,7 @@
                             </a>
                         </li>*@
                     <li class="sub-menu">
-                        <a href="Manager/Customers">
+                        <a href="Customers">
                             <i class="fa fa-desktop"></i>
                             <span><b>Khách hàng</b></span>
                         </a>
@@ -125,7 +125,7 @@
         <!--main content start-->
         <section id="main-content">
             <section class="wrapper">
-                <div class="row">
+                <div class="row" style="width:90%; margin: auto">
                     @RenderBody()
                     <!-- /row -->
                     <!-- /row -->
@@ -135,7 +135,7 @@
             </section>
         </section>
         <!--main content end-->
-        <footer class="site-footer">
+        @*<footer class="site-footer" style="position:fixed">
             <div class="text-center">
                 <p>
                     &copy; Copyrights <strong>SUPERXE</strong>. All Rights Reserved
@@ -148,7 +148,7 @@
                     <i class="fa fa-angle-up"></i>
                 </a>
             </div>
-        </footer>
+        </footer>*@
         <!--footer end-->
     </section>
     <!-- js placed at the end of the document so the pages load faster -->

@@ -1,6 +1,7 @@
 ﻿using EntityModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +14,7 @@ namespace ToyStore.Controllers
         EntityDataContext _context = new EntityDataContext();
 
         // GET: Manager
+
         public ActionResult Index()
         {
             return View();
@@ -76,6 +78,25 @@ namespace ToyStore.Controllers
                 _context.SaveChanges();
             }
             return RedirectToAction("Customers");
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            KhachHang kh = _context.KhachHang.Find(id);
+            return View(kh);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(KhachHang kh)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(kh).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Customers");
+            }
+            return View(kh);
         }
     }
 }
