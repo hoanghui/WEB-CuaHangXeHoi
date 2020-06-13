@@ -1,0 +1,58 @@
+﻿@using EntityModels
+@model IEnumerable<ViewModels.ProductsViewModel>
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout_Manager.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<a href="/Products/Create" class="btn btn-warning">Thêm</a>
+<table class="table table-bordered table-hover" style="margin-top:20px">
+    <thead>
+        <tr>
+            <th style="text-align:center">STT</th>
+            <th style="text-align:center">Mã xe</th>
+            <th style="text-align:center">Mã loại xe</th>
+            <th style="text-align:center">Tên xe</th>
+            <th style="text-align:center">Năm sản xuất</th>
+            <th style="text-align:center">Giá</th>
+            <th style="text-align:center">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-right">0@(ViewBag.Quantity++)</td>
+                <td class="text-center">@Html.DisplayFor(p => item.MaXe)</td>
+                <td>@Html.DisplayFor(p => item.TenLoaiXe)</td>
+                <td class="text-left">@Html.DisplayFor(p => item.TenXe)</td>
+                <td class="text-center">@Html.DisplayFor(p => item.NamSanXuat)</td>
+                <td class="text-right">@Html.DisplayFor(p => item.Gia)</td>
+                <td>
+                    <a href="Edit/@item.MaXe" class="btn btn-danger" style="margin-right:10px">Sửa</a>
+                    <a href="Delete/@item.MaXe" id="delete" class="btn btn-info">Xóa</a>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@*@section scripts
+    {
+        <script>
+        $(document).ready(
+            $("#delete").click(function () {
+                alert("Bạn chắc chắn xóa?");
+                this.attributes("href", "")
+            })
+        )
+        </script>
+    }*@
+
+
+

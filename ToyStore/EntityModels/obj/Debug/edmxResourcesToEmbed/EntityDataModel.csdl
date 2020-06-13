@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="MaHoaDon" />
+    </Key>
+    <Property Name="MaHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayLapHoaDon" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ThanhToan" Type="Double" />
+    <Property Name="MaKhachHang" Type="Int32" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK__HoaDon__MaKhachH__52593CB8" FromRole="HoaDon" ToRole="KhachHang" />
+    <NavigationProperty Name="Xe" Relationship="Self.ChiTietHoaDon" FromRole="HoaDon" ToRole="Xe" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaKhachHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTenKhachHang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__MaKhachH__52593CB8" FromRole="KhachHang" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="LoaiXe">
+    <Key>
+      <PropertyRef Name="MaLoaiXe" />
+    </Key>
+    <Property Name="MaLoaiXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiXe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Xe" Relationship="Self.FK__Xe__MaLoaiXe__4F7CD00D" FromRole="LoaiXe" ToRole="Xe" />
+  </EntityType>
+  <EntityType Name="QuanLy">
+    <Key>
+      <PropertyRef Name="MaQuanLy" />
+    </Key>
+    <Property Name="MaQuanLy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenQuanLy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PassQuanLy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Xe">
+    <Key>
+      <PropertyRef Name="MaXe" />
+    </Key>
+    <Property Name="MaXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenXe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NamSanXuat" Type="Int32" />
+    <Property Name="Gia" Type="Double" />
+    <Property Name="MaLoaiXe" Type="Int32" />
+    <NavigationProperty Name="LoaiXe" Relationship="Self.FK__Xe__MaLoaiXe__4F7CD00D" FromRole="Xe" ToRole="LoaiXe" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.ChiTietHoaDon" FromRole="Xe" ToRole="HoaDon" />
+  </EntityType>
+  <Association Name="FK__HoaDon__MaKhachH__52593CB8">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Xe__MaLoaiXe__4F7CD00D">
+    <End Role="LoaiXe" Type="Self.LoaiXe" Multiplicity="0..1" />
+    <End Role="Xe" Type="Self.Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiXe">
+        <PropertyRef Name="MaLoaiXe" />
+      </Principal>
+      <Dependent Role="Xe">
+        <PropertyRef Name="MaLoaiXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChiTietHoaDon">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <End Role="Xe" Type="Self.Xe" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="EntityDataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" />
+    <EntitySet Name="LoaiXe" EntityType="Self.LoaiXe" />
+    <EntitySet Name="QuanLy" EntityType="Self.QuanLy" />
+    <EntitySet Name="Xe" EntityType="Self.Xe" />
+    <AssociationSet Name="FK__HoaDon__MaKhachH__52593CB8" Association="Self.FK__HoaDon__MaKhachH__52593CB8">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Xe__MaLoaiXe__4F7CD00D" Association="Self.FK__Xe__MaLoaiXe__4F7CD00D">
+      <End Role="LoaiXe" EntitySet="LoaiXe" />
+      <End Role="Xe" EntitySet="Xe" />
+    </AssociationSet>
+    <AssociationSet Name="ChiTietHoaDon" Association="Self.ChiTietHoaDon">
+      <End Role="HoaDon" EntitySet="HoaDon" />
+      <End Role="Xe" EntitySet="Xe" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

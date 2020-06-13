@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -73,16 +74,16 @@
                             </a>
                         </li>*@
                     <li class="sub-menu">
-                        <a href="Customers">
+                        <a href="/Customers">
                             <i class="fa fa-desktop"></i>
                             <span><b>Khách hàng</b></span>
                         </a>
-                        <ul class="sub">
+                        @*<ul class="sub">
                             <li><a href="general.html">General</a></li>
                             <li><a href="buttons.html">Buttons</a></li>
                             <li><a href="panels.html">Panels</a></li>
                             <li><a href="font_awesome.html">Font Awesome</a></li>
-                        </ul>
+                        </ul>*@
                     </li>
                     <li class="sub-menu">
                         <a href="javascript:;">
@@ -90,13 +91,8 @@
                             <span><b>Sản phẩm</b></span>
                         </a>
                         <ul class="sub">
-                            <li><a href="grids.html">Grids</a></li>
-                            <li><a href="calendar.html">Calendar</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="todo_list.html">Todo List</a></li>
-                            <li><a href="dropzone.html">Dropzone File Upload</a></li>
-                            <li><a href="inline_editor.html">Inline Editor</a></li>
-                            <li><a href="file_upload.html">Multiple File Upload</a></li>
+                            <li><a href="/Products">Danh sách sản phấm</a></li>
+                            <li><a href="/Category">Loại sản phẩm</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -105,15 +101,7 @@
                             <span><b>Hóa đơn</b></span>
                         </a>
                         <ul class="sub">
-                            <li><a href="blank.html">Blank Page</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="lock_screen.html">Lock Screen</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                            <li><a href="invoice.html">Invoice</a></li>
-                            <li><a href="pricing_table.html">Pricing Table</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="404.html">404 Error</a></li>
-                            <li><a href="500.html">500 Error</a></li>
+                            <li><a href="blank.html">Danh sách hóa đơn</a></li>
                         </ul>
                     </li>
 
@@ -155,24 +143,24 @@
     <script src="~/Assets/libManager/jquery/jquery.min.js"></script>
 
     <script src="~/Assets/libManager/bootstrap/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script class="include" type="text/javascript" src="~/Assets/libManager/jquery.dcjqaccordion.2.7.js"></script>
     <script src="~/Assets/libManager/jquery.scrollTo.min.js"></script>
     <script src="~/Assets/libManager/jquery.nicescroll.js"></script>
     <script src="~/Assets/libManager/jquery.sparkline.js"></script>
     <!--common script for all pages-->
-    <script src="lib/common-scripts.js"></script>
-    <script type="text/javascript" src="lib/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="lib/gritter-conf.js"></script>
+    <script src="~/Assets/libManager/common-scripts.js"></script>
+    <script type="text/javascript" src="~/Assets/libManager/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="~/Assets/libManager/gritter-conf.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
             var unique_id = $.gritter.add({
                 // (string | mandatory) the heading of the notification
-                title: 'Welcome to Dashio!',
+                title: 'Chào mừng đã đến với SuperXe!',
                 // (string | mandatory) the text inside the notification
-                text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
+                text: 'Bấm x để tắt!',
                 // (string | optional) the image to display on the left
-                image: 'img/ui-sam.jpg',
+                image:'/Assets/imagasManager/mer-bg.jpg',
                 // (bool | optional) if you want it to fade out on its own or just sit there
                 sticky: false,
                 // (int | optional) the time you want it to be alive for before fading out

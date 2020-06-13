@@ -1,0 +1,10 @@
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityModels.dll.config
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityModels.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityModels.pdb
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityFramework.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityFramework.xml
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csprojAssemblyReference.cache
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csproj.CoreCompileInputs.cache
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csproj.CopyComplete
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.dll
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.pdb
