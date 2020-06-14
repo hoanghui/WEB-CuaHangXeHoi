@@ -19,6 +19,10 @@ body {
   background: #fff;
 }
 
+.col-md-6 > .desc > h3 {
+  color: #000;
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -60,6 +64,7 @@ a:hover, a:active, a:focus {
 
 p {
   margin-bottom: 20px;
+  color: #b5b3b3;
 }
 
 h1, h2, h3, h4, h5, h6, figure {
@@ -67,6 +72,10 @@ h1, h2, h3, h4, h5, h6, figure {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
+}
+
+h3 {
+  color: #FFF;
 }
 
 ::-webkit-selection {
@@ -340,7 +349,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 24px;
   font-weight: 400;
-  color: #000;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -350,7 +359,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   padding: 40px;
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .desc .price {
@@ -712,7 +721,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: rgba(0, 0, 0, 0.05);
 }
 
-#fh5co-services,
+
 #fh5co-started,
 #fh5co-testimonial,
 #fh5co-started,
@@ -722,6 +731,10 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-footer {
   padding: 7em 0;
   clear: both;
+  background-color: #f5dba6;
+}
+#fh5co-services {
+
 }
 @media screen and (max-width: 768px) {
   #fh5co-services,

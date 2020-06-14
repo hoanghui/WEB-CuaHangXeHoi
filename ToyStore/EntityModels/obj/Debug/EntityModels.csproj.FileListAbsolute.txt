@@ -8,3 +8,13 @@ D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csproj.CopyComplete
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.pdb
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityModels.dll.config
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityModels.dll
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityModels.pdb
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csprojAssemblyReference.cache
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.csproj.CopyComplete
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.dll
+C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\EntityModels\obj\Debug\EntityModels.pdb
