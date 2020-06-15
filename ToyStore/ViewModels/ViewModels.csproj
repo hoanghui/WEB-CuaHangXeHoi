@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountViewModel.cs" />
+    <Compile Include="BillViewModel.cs" />
     <Compile Include="CategoryViewModel.cs" />
     <Compile Include="CustomerViewModel.cs" />
+    <Compile Include="DetailBillViewModel.cs" />
     <Compile Include="ProductsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,7 @@
 ﻿using EntityModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -65,6 +66,34 @@ namespace ToyStore.Controllers
         {
             var dao = new CategoryDAO();
             ViewBag.MaLoaiXe = new SelectList(dao.ListAll(), "MaLoaiXe", "TenLoaiXe", selectedId);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Xe x = _context.Xe.Find(id);
+            ProductsViewModel p = new ProductsViewModel{ 
+                MaXe = x.MaXe,
+                TenXe = x.TenXe,
+                Gia = x.Gia,
+                NamSanXuat = x.NamSanXuat,
+                MaLoaiXe = x.MaLoaiXe,
+                TenLoaiXe = x.TenXe
+            };
+            SetViewBag(x.MaLoaiXe);
+            return View(p);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Xe x)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(x).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(x);
         }
     }
 }

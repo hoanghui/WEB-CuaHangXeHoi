@@ -17,12 +17,39 @@ namespace ToyStore.Controllers
             var list = (from l in _context.LoaiXe
                         select new CategoryViewModel
                         {
-                                MaLoaiXe = l.MaLoaiXe,
-                                TenLoaiXe = l.TenLoaiXe
+                            MaLoaiXe = l.MaLoaiXe,
+                            TenLoaiXe = l.TenLoaiXe
                         });
             ViewBag.Quantity = 0;
             return View(list);
         }
 
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(CategoryViewModel c)
+        {
+            if (c.TenLoaiXe != null)
+            {
+                var l = new LoaiXe
+                {
+                    TenLoaiXe = c.TenLoaiXe
+                };
+                _context.LoaiXe.Add(l);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }

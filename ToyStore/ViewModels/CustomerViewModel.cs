@@ -14,7 +14,7 @@ namespace ViewModels
 
         [Display(Name = "Họ tên khách hàng")]
         public string  HoTenKhachHang { get; set; }
-        [Display(Name = "Ngày sinh")]
+        [Display(Name = "Ngày sinh"), DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime?  NgaySinh { get; set; }
         [Display(Name = "Địa chỉ")]
         public string   DiaChi{ get; set; }

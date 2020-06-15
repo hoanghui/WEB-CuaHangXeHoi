@@ -6,8 +6,8 @@
     ViewBag.Quantity++;
 }
 <h2>Loại xe</h2>
-<a href="Create" class="btn btn-warning">Thêm</a>
-<table class="table table-bordered table-hover" style="margin-top:20px">
+<a href="Category/Create" class="btn btn-warning">Thêm</a>
+<table class="table table-bordered table-hover" style="margin-top:20px; background-color:white; border-radius:10px">
     <thead>
         <tr>
             <th style="text-align:center">STT</th>
@@ -23,14 +23,11 @@
                 <td class="text-right">0@(ViewBag.Quantity++)</td>
                 <td class="text-center">@Html.DisplayFor(p => item.MaLoaiXe)</td>
                 <td>@Html.DisplayFor(p => item.TenLoaiXe)</td>
-                <td>
-                    <a href="Edit/@item.MaLoaiXe" class="btn btn-danger" style="margin-right:10px">Sửa</a>
-                    <a href="Delete/@item.MaLoaiXe" id="delete" class="btn btn-info">Xóa</a>
+                <td class="text-center">
+                    <a href="Edit/@item.MaLoaiXe" class="btn btn-info" style="margin-right:10px">Sửa</a>
+                    <a href="Delete/@item.MaLoaiXe" id="delete" class="btn btn-danger">Xóa</a>
                 </td>
-                @*<td>
-                        <a href="/Student/Edit/@item.MaKhachHang" class="btn btn-danger" style="margin-right:10px">Sửa</a>
-                        <a href="/Student/Delete/@item.MaKhachHang" id="delete" class="btn btn-info">Xóa</a>
-                    </td>*@
+               
             </tr>
         }
     </tbody>

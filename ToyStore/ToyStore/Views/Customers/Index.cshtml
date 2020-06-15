@@ -7,7 +7,7 @@
 }
 <h2>Khách hàng</h2>
 <a href="Create" class="btn btn-warning">Thêm</a>
-<table class="table table-bordered table-hover" style="margin-top:20px">
+<table class="table table-bordered table-hover" style="margin-top:20px; background-color:white; border-radius:10px">
     <thead>
         <tr>
             <th>STT</th>
@@ -28,8 +28,8 @@
                 <td class="text-center">@Html.DisplayFor(p => item.NgaySinh)</td>
                 <td class="text-center">@Html.DisplayFor(p => item.DiaChi)</td>
                 <td>
-                    <a href="/Customers/Edit/@item.MaKhachHang" class="btn btn-danger" style="margin-right:10px">Sửa</a>
-                    <a href="/Customers/Delete/@item.MaKhachHang" id="delete" class="btn btn-info">Xóa</a>
+                    <a href="/Customers/Edit/@item.MaKhachHang" class="btn btn-info" style="margin-right:10px">Sửa</a>
+                    <a href="/Customers/Delete/@item.MaKhachHang" id="delete" class="btn btn-danger">Xóa</a>
                 </td>
                 @*<td>
                         <a href="/Student/Edit/@item.MaKhachHang" class="btn btn-danger" style="margin-right:10px">Sửa</a>
@@ -43,15 +43,37 @@
 
 @*@section scripts
     {
-        <script>
-        $(document).ready(
-            $("#delete").click(function () {
-                alert("Bạn chắc chắn xóa?");
-                this.attributes("href", "")
-            })
-        )
+    <script>
+        $(function () {
+            $("#delete").click(function (event) {
+                event.preventDefault();
+                $('<div title="Confirm Box"></div>').dialog({
+                    open: function (event, ui) {
+                        $(this).html("Yes or No question?");
+                    },
+                    close: function () {
+                        $(this).remove();
+                    },
+                    resizable: false,
+                    height: 140,
+                    modal: true,
+                    buttons: {
+                        'Yes': function () {
+                            $(this).dialog('close');
+                            $.post('url/');
+
+                        },
+                        'No': function () {
+                            $(this).dialog('close');
+                            $.post('url/');
+                        }
+                    }
+                });
+            });
+        });
         </script>
-    }*@
+}*@
+
 
 
 

@@ -1,0 +1,56 @@
+﻿@using EntityModels
+@model IEnumerable<ViewModels.BillViewModel>
+@{
+    ViewBag.Title = "Hóa đơn";
+    Layout = "~/Views/Shared/_Layout_Manager.cshtml";
+}
+
+<h2>Danh sách hóa đơn</h2>
+
+<a href="/Bill/Create" class="btn btn-warning">Thêm</a>
+<table class="table table-bordered table-hover" style="margin-top:20px; background-color:white; border-radius:10px">
+    <thead>
+        <tr>
+            <th style="text-align:center">STT</th>
+            <th style="text-align:center">Mã hóa đơn</th>
+            <th style="text-align: center">Ngày lập hóa đơn</th>
+            <th style="text-align:center">Tổng tiền</th>
+            <th style="text-align:center">Mã khách hàng</th>
+            <th style="text-align:center">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-right">0@(ViewBag.Quantity++)</td>
+                <td class="text-center">@Html.DisplayFor(p => item.MaHoaDon)</td>
+                <td>@Html.DisplayFor(p => item.NgayLapHoaDon)</td>
+                <td class="text-right">@Html.DisplayFor(p => item.ThanhToan)</td>
+                <td class="text-center">@Html.DisplayFor(p => item.MaKhachHang)</td>
+                <td class="text-center">
+                    <a href="Bill/Detail/@item.MaHoaDon" class="btn btn-info" style="margin-right:10px">Chi tiết</a>
+                    @*<a href="Delete/@item.MaHoaDon" id="delete" class="btn btn-info">Xóa</a>*@
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@*@section scripts
+    {
+        <script>
+        $(document).ready(
+            $("#delete").click(function () {
+                alert("Bạn chắc chắn xóa?");
+                this.attributes("href", "")
+            })
+        )
+        </script>
+    }*@
+
+
+

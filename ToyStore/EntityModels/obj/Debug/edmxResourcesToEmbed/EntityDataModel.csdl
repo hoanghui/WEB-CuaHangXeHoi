@@ -20,6 +20,7 @@
     <Property Name="NgaySinh" Type="DateTime" Precision="3" />
     <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__MaKhachH__52593CB8" FromRole="KhachHang" ToRole="HoaDon" />
+    <Property Name="TrangThai" Type="Boolean" />
   </EntityType>
   <EntityType Name="LoaiXe">
     <Key>

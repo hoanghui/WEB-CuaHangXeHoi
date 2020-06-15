@@ -8,12 +8,12 @@
 <h2>Danh sách sản phẩm</h2>
 
 <a href="/Products/Create" class="btn btn-warning">Thêm</a>
-<table class="table table-bordered table-hover" style="margin-top:20px">
+<table class="table table-bordered table-hover" style="margin-top:20px; background-color:white; border-radius:10px">
     <thead>
         <tr>
             <th style="text-align:center">STT</th>
             <th style="text-align:center">Mã xe</th>
-            <th style="text-align:center">Mã loại xe</th>
+            <th style="text-align: center">Mã loại xe</th>
             <th style="text-align:center">Tên xe</th>
             <th style="text-align:center">Năm sản xuất</th>
             <th style="text-align:center">Giá</th>
@@ -31,8 +31,8 @@
                 <td class="text-center">@Html.DisplayFor(p => item.NamSanXuat)</td>
                 <td class="text-right">@Html.DisplayFor(p => item.Gia)</td>
                 <td>
-                    <a href="Edit/@item.MaXe" class="btn btn-danger" style="margin-right:10px">Sửa</a>
-                    <a href="Delete/@item.MaXe" id="delete" class="btn btn-info">Xóa</a>
+                    <a href="Products/Edit/@item.MaXe" class="btn btn-info" style="margin-right:10px">Sửa</a>
+                    <a href="Delete/@item.MaXe" id="delete" class="btn btn-danger">Xóa</a>
                 </td>
 
 

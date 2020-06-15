@@ -1,0 +1,65 @@
+﻿@using EntityModels
+@model ViewModels.BillViewModel
+@{
+    ViewBag.Title = "Chi tiết hóa đơn";
+    Layout = "~/Views/Shared/_Layout_Manager.cshtml";
+}
+
+<h2>Chi tiết hóa đơn: </h2>
+<p>@Model.HoTenKhachHang</p>
+
+
+<table class="table table-bordered table-hover" style="margin-top:20px; background-color:white; border-radius:10px">
+    <thead>
+        <tr>
+            <th style="text-align:center">STT</th>
+            <th style="text-align:center">Mã xe</th>
+            <th style="text-align:center">Tên xe</th>
+            <th style="text-align:center">Tên loại xe</th>
+            @*<th style="text-align:center">Mã hóa đơn</th>
+            <th style="text-align:center">Ngày lập hóa đơn</th>
+            <th style="text-align:center">Tổng tiền</th>
+            <th style="text-align:center">Mã khách hàng</th>*@
+            <th style="text-align:center">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DanhSachChiTiet)
+        {
+        <tr>
+            <td class="text-right">0@(ViewBag.Quantity++)</td>
+            <td class="text-center">@Html.DisplayFor(p => item.MaXe)</td>
+            @*<td>@Html.DisplayFor(p => item.NgayLapHoaDon)</td>
+            <td class="text-left">@Html.DisplayFor(p => item.ThanhToan)</td>
+            <td class="text-center">@Html.DisplayFor(p => item.HoTenKhachHang)</td>
+            <td class="text-center">@Html.DisplayFor(p => item.NgaySinh)</td>
+            <td class="text-center">@Html.DisplayFor(p => item.DiaChi)</td>*@
+            <td class="text-center">@Html.DisplayFor(p => item.TenXe)</td>
+            <td class="text-center">@Html.DisplayFor(p => item.TenLoaiXe)</td>
+            @*<td class="text-center">@Html.DisplayFor(p => item.NamSanXuat)</td>
+            <td class="text-center">@Html.DisplayFor(p => item.Gia)</td>*@
+            <td class="text-center">
+                <a href="Delete/@item.MaHoaDon" id="delete" class="btn btn-danger">Xóa</a>
+            </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+@*@section scripts
+    {
+        <script>
+        $(document).ready(
+            $("#delete").click(function () {
+                alert("Bạn chắc chắn xóa?");
+                this.attributes("href", "")
+            })
+        )
+        </script>
+    }*@
+
+
+

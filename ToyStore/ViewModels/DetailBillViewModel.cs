@@ -7,9 +7,20 @@ using System.Threading.Tasks;
 
 namespace ViewModels
 {
-    public class ProductsViewModel
-    {   
-        [Display(Name ="Mã xe")]
+    public class DetailBillViewModel
+    {
+        [Display(Name = "Mã hóa đơn")]
+        public int MaHoaDon { get; set; }
+
+        [Display(Name = "Ngày lập hóa đơn"), DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public System.DateTime NgayLapHoaDon { get; set; }
+
+        [Display(Name = "Tổng tiền")]
+        public Nullable<double> ThanhToan { get; set; }
+
+       
+
+        [Display(Name = "Mã xe")]
         public int MaXe { get; set; }
 
         [Display(Name = "Tên xe")]
@@ -18,14 +29,14 @@ namespace ViewModels
         [Display(Name = "Năm sản xuất")]
         public Nullable<int> NamSanXuat { get; set; }
 
-        [Display(Name = "Giá xe"), DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:0,0}")]
+        [Display(Name = "Giá xe")]
         public Nullable<double> Gia { get; set; }
 
         [Display(Name = "Mã loại xe")]
         public Nullable<int> MaLoaiXe { get; set; }
 
         [Display(Name = "Tên loại xe")]
-        public string TenLoaiXe{ get; set; }
+        public string TenLoaiXe { get; set; }
 
     }
 }

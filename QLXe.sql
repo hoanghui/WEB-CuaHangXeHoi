@@ -24,7 +24,8 @@ CREATE TABLE KhachHang
 	MaKhachHang INT IDENTITY(0,1) PRIMARY KEY,
 	HoTenKhachHang NVARCHAR(100) NOT NULL,
 	NgaySinh DATETIME,
-	DiaChi NVARCHAR(200)
+	DiaChi NVARCHAR(200),
+	TrangThai BIT
 )
 GO
 
@@ -77,11 +78,11 @@ GO
 
 INSERT INTO KhachHang 
 VALUES 
-(N'Steven King','06/17/1987',N'AD_PRES'),
-(N'Neena Kochhar','09/21/1989',N'AD_VP'),
-(N'Lex De Haan','01/13/1993',N'AD_VP'),
-(N'Alexander Hunold','01/03/1990',N'IT_PROG'),
-(N'Bruce Ernst','05/21/1991',N'IT_PROG')
+(N'Steven King','06/17/1987',N'AD_PRES','1'),
+(N'Neena Kochhar','09/21/1989',N'AD_VP','1'),
+(N'Lex De Haan','01/13/1993',N'AD_VP','1'),
+(N'Alexander Hunold','01/03/1990',N'IT_PROG','1'),
+(N'Bruce Ernst','05/21/1991',N'IT_PROG','1')
 GO
 
 INSERT INTO Xe 
@@ -114,3 +115,5 @@ VALUES
 (0,1),
 (1,0)
 GO
+
+UPDATE KhachHang SET TrangThai = 1

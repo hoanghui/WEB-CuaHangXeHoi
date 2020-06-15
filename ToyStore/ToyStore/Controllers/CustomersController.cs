@@ -16,13 +16,14 @@ namespace ToyStore.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var list = (from s in _context.KhachHang
+            var list = (from kh in _context.KhachHang
+                        where kh.TrangThai == true
                         select new CustomerViewModel
                         {
-                            MaKhachHang = s.MaKhachHang,
-                            HoTenKhachHang = s.HoTenKhachHang,
-                            NgaySinh = s.NgaySinh,
-                            DiaChi = s.DiaChi
+                            MaKhachHang = kh.MaKhachHang,
+                            HoTenKhachHang = kh.HoTenKhachHang,
+                            NgaySinh = kh.NgaySinh,
+                            DiaChi = kh.DiaChi
                         });
             ViewBag.Quantity = 0;
             return View(list);
@@ -69,6 +70,17 @@ namespace ToyStore.Controllers
                 return RedirectToAction("Customers");
             }
             return View(kh);
+        }
+
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            KhachHang kh = _context.KhachHang.Find(id);
+            kh.TrangThai = false;
+            _context.Entry(kh).State = EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

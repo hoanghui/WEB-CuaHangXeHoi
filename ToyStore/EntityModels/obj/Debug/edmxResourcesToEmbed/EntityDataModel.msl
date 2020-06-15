@@ -14,6 +14,7 @@
     <EntitySetMapping Name="KhachHang">
       <EntityTypeMapping TypeName="EntityModels.KhachHang">
         <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
           <ScalarProperty Name="HoTenKhachHang" ColumnName="HoTenKhachHang" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />

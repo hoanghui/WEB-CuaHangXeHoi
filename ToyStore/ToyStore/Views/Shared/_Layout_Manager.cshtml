@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <title>Dashio - Bootstrap Admin Template</title>
+    <title>STALLON CONCEPT</title>
 
     <!-- Favicons -->
     <link href="~/Assets/imagasManager/favicon.png" rel="icon">
@@ -43,7 +43,7 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!--logo start-->
-            <a href="/Manager" class="logo"><b>SUPER<span>XE</span></b></a>
+            <a href="/Manager" class="logo"><b>STALLON<span>CONCEPT</span></b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
 
@@ -79,11 +79,11 @@
                             <span><b>Khách hàng</b></span>
                         </a>
                         @*<ul class="sub">
-                            <li><a href="general.html">General</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="panels.html">Panels</a></li>
-                            <li><a href="font_awesome.html">Font Awesome</a></li>
-                        </ul>*@
+                                <li><a href="general.html">General</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="panels.html">Panels</a></li>
+                                <li><a href="font_awesome.html">Font Awesome</a></li>
+                            </ul>*@
                     </li>
                     <li class="sub-menu">
                         <a href="javascript:;">
@@ -101,7 +101,7 @@
                             <span><b>Hóa đơn</b></span>
                         </a>
                         <ul class="sub">
-                            <li><a href="blank.html">Danh sách hóa đơn</a></li>
+                            <li><a href="/Bill">Danh sách hóa đơn</a></li>
                         </ul>
                     </li>
 
@@ -110,11 +110,13 @@
             </div>
         </aside>
 
+
         <!--main content start-->
         <section id="main-content">
             <section class="wrapper">
                 <div class="row" style="width:90%; margin: auto">
                     @RenderBody()
+
                     <!-- /row -->
                     <!-- /row -->
                 </div>
@@ -124,25 +126,24 @@
         </section>
         <!--main content end-->
         @*<footer class="site-footer" style="position:fixed">
-            <div class="text-center">
-                <p>
-                    &copy; Copyrights <strong>SUPERXE</strong>. All Rights Reserved
-                </p>
-                <div class="credits">
+                <div class="text-center">
+                    <p>
+                        &copy; Copyrights <strong>SUPERXE</strong>. All Rights Reserved
+                    </p>
+                    <div class="credits">
 
-                    Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+                        Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+                    </div>
+                    <a href="index.html#" class="go-top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
                 </div>
-                <a href="index.html#" class="go-top">
-                    <i class="fa fa-angle-up"></i>
-                </a>
-            </div>
-        </footer>*@
+            </footer>*@
         <!--footer end-->
     </section>
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="~/Assets/libManager/jquery/jquery.min.js"></script>
 
-    <script src="~/Assets/libManager/bootstrap/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="~/Assets/libManager/jquery.dcjqaccordion.2.7.js"></script>
     <script src="~/Assets/libManager/jquery.scrollTo.min.js"></script>
     <script src="~/Assets/libManager/jquery.nicescroll.js"></script>
@@ -151,16 +152,18 @@
     <script src="~/Assets/libManager/common-scripts.js"></script>
     <script type="text/javascript" src="~/Assets/libManager/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="~/Assets/libManager/gritter-conf.js"></script>
+    @*<script src="~/Scripts/jquery-3.4.1.min.js"></script>*@
+    <script src="~/Scripts/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
             var unique_id = $.gritter.add({
                 // (string | mandatory) the heading of the notification
-                title: 'Chào mừng đã đến với SuperXe!',
+                title: 'Chào mừng đã đến với STALLON CONCEPT!',
                 // (string | mandatory) the text inside the notification
                 text: 'Bấm x để tắt!',
                 // (string | optional) the image to display on the left
-                image:'/Assets/imagasManager/mer-bg.jpg',
+                image: '/Assets/imagasManager/mer-bg.jpg',
                 // (bool | optional) if you want it to fade out on its own or just sit there
                 sticky: false,
                 // (int | optional) the time you want it to be alive for before fading out
@@ -213,7 +216,10 @@
           var to = $("#" + id).data("to");
           console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
+
     </script>
+    @RenderSection("scripts", required: false)
 </body>
+
 
 </html>
