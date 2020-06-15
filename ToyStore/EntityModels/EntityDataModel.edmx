@@ -21,6 +21,7 @@
           <Property Name="NgayLapHoaDon" Type="datetime" Nullable="false" />
           <Property Name="ThanhToan" Type="float" />
           <Property Name="MaKhachHang" Type="int" />
+          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -38,6 +39,7 @@
           </Key>
           <Property Name="MaLoaiXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenLoaiXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <EntityType Name="QuanLy">
           <Key>
@@ -56,6 +58,7 @@
           <Property Name="NamSanXuat" Type="int" />
           <Property Name="Gia" Type="float" />
           <Property Name="MaLoaiXe" Type="int" />
+          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <Association Name="FK__ChiTietHo__MaHoa__5535A963">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -81,7 +84,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HoaDon__MaKhachH__52593CB8">
+        <Association Name="FK__HoaDon__TrangTha__52593CB8">
           <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
@@ -120,7 +123,7 @@
             <End Role="Xe" EntitySet="Xe" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
           </AssociationSet>
-          <AssociationSet Name="FK__HoaDon__MaKhachH__52593CB8" Association="Self.FK__HoaDon__MaKhachH__52593CB8">
+          <AssociationSet Name="FK__HoaDon__TrangTha__52593CB8" Association="Self.FK__HoaDon__TrangTha__52593CB8">
             <End Role="KhachHang" EntitySet="KhachHang" />
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
@@ -143,6 +146,7 @@
           <Property Name="MaKhachHang" Type="Int32" />
           <NavigationProperty Name="KhachHang" Relationship="Self.FK__HoaDon__MaKhachH__52593CB8" FromRole="HoaDon" ToRole="KhachHang" />
           <NavigationProperty Name="Xe" Relationship="Self.ChiTietHoaDon" FromRole="HoaDon" ToRole="Xe" />
+          <Property Name="TrangThai" Type="Boolean" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -162,6 +166,7 @@
           <Property Name="MaLoaiXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenLoaiXe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Xe" Relationship="Self.FK__Xe__MaLoaiXe__4F7CD00D" FromRole="LoaiXe" ToRole="Xe" />
+          <Property Name="TrangThai" Type="Boolean" />
         </EntityType>
         <EntityType Name="QuanLy">
           <Key>
@@ -182,6 +187,7 @@
           <Property Name="MaLoaiXe" Type="Int32" />
           <NavigationProperty Name="LoaiXe" Relationship="Self.FK__Xe__MaLoaiXe__4F7CD00D" FromRole="Xe" ToRole="LoaiXe" />
           <NavigationProperty Name="HoaDon" Relationship="Self.ChiTietHoaDon" FromRole="Xe" ToRole="HoaDon" />
+          <Property Name="TrangThai" Type="Boolean" />
         </EntityType>
         <Association Name="FK__HoaDon__MaKhachH__52593CB8">
           <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
@@ -239,6 +245,7 @@
           <EntitySetMapping Name="HoaDon">
             <EntityTypeMapping TypeName="EntityModels.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
                 <ScalarProperty Name="NgayLapHoaDon" ColumnName="NgayLapHoaDon" />
                 <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
@@ -260,6 +267,7 @@
           <EntitySetMapping Name="LoaiXe">
             <EntityTypeMapping TypeName="EntityModels.LoaiXe">
               <MappingFragment StoreEntitySet="LoaiXe">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
                 <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
               </MappingFragment>
@@ -277,6 +285,7 @@
           <EntitySetMapping Name="Xe">
             <EntityTypeMapping TypeName="EntityModels.Xe">
               <MappingFragment StoreEntitySet="Xe">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="MaXe" ColumnName="MaXe" />
                 <ScalarProperty Name="TenXe" ColumnName="TenXe" />
                 <ScalarProperty Name="NamSanXuat" ColumnName="NamSanXuat" />

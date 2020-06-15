@@ -24,6 +24,7 @@ namespace EntityModels
         public Nullable<int> NamSanXuat { get; set; }
         public Nullable<double> Gia { get; set; }
         public Nullable<int> MaLoaiXe { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
     
         public virtual LoaiXe LoaiXe { get; set; }
         public virtual ICollection<HoaDon> HoaDon { get; set; }

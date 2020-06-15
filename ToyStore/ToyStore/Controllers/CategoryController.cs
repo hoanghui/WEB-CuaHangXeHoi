@@ -1,6 +1,7 @@
 ﻿using EntityModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,6 +16,7 @@ namespace ToyStore.Controllers
         public ActionResult Index()
         {
             var list = (from l in _context.LoaiXe
+                        where l.TrangThai == true
                         select new CategoryViewModel
                         {
                             MaLoaiXe = l.MaLoaiXe,
@@ -37,7 +39,8 @@ namespace ToyStore.Controllers
             {
                 var l = new LoaiXe
                 {
-                    TenLoaiXe = c.TenLoaiXe
+                    TenLoaiXe = c.TenLoaiXe,
+                    TrangThai = true
                 };
                 _context.LoaiXe.Add(l);
                 _context.SaveChanges();
@@ -46,10 +49,34 @@ namespace ToyStore.Controllers
             return View();
         }
 
-
-        public ActionResult Edit()
+        [HttpGet]
+        public ActionResult Edit(int id)
         {
-            return View();
+            LoaiXe lx = _context.LoaiXe.Find(id);
+            return View(lx);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(LoaiXe lx)
+        {
+            if (ModelState.IsValid)
+            {
+                lx.TrangThai = true;
+                _context.Entry(lx).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(lx);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            LoaiXe lx = _context.LoaiXe.Find(id);
+            lx.TrangThai = false;
+            _context.Entry(lx).State = EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

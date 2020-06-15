@@ -16,6 +16,7 @@
     <Property Name="NgayLapHoaDon" Type="datetime" Nullable="false" />
     <Property Name="ThanhToan" Type="float" />
     <Property Name="MaKhachHang" Type="int" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>
@@ -33,6 +34,7 @@
     </Key>
     <Property Name="MaLoaiXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenLoaiXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <EntityType Name="QuanLy">
     <Key>
@@ -51,6 +53,7 @@
     <Property Name="NamSanXuat" Type="int" />
     <Property Name="Gia" Type="float" />
     <Property Name="MaLoaiXe" Type="int" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <Association Name="FK__ChiTietHo__MaHoa__5535A963">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -76,7 +79,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__MaKhachH__52593CB8">
+  <Association Name="FK__HoaDon__TrangTha__52593CB8">
     <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -115,7 +118,7 @@
       <End Role="Xe" EntitySet="Xe" />
       <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__MaKhachH__52593CB8" Association="Self.FK__HoaDon__MaKhachH__52593CB8">
+    <AssociationSet Name="FK__HoaDon__TrangTha__52593CB8" Association="Self.FK__HoaDon__TrangTha__52593CB8">
       <End Role="KhachHang" EntitySet="KhachHang" />
       <End Role="HoaDon" EntitySet="HoaDon" />
     </AssociationSet>

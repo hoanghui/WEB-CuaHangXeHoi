@@ -580,6 +580,7 @@
     <Content Include="Views\Customers\Delete.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

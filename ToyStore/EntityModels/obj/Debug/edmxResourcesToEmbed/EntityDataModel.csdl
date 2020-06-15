@@ -10,6 +10,7 @@
     <Property Name="MaKhachHang" Type="Int32" />
     <NavigationProperty Name="KhachHang" Relationship="Self.FK__HoaDon__MaKhachH__52593CB8" FromRole="HoaDon" ToRole="KhachHang" />
     <NavigationProperty Name="Xe" Relationship="Self.ChiTietHoaDon" FromRole="HoaDon" ToRole="Xe" />
+    <Property Name="TrangThai" Type="Boolean" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>
@@ -29,6 +30,7 @@
     <Property Name="MaLoaiXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TenLoaiXe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Xe" Relationship="Self.FK__Xe__MaLoaiXe__4F7CD00D" FromRole="LoaiXe" ToRole="Xe" />
+    <Property Name="TrangThai" Type="Boolean" />
   </EntityType>
   <EntityType Name="QuanLy">
     <Key>
@@ -49,6 +51,7 @@
     <Property Name="MaLoaiXe" Type="Int32" />
     <NavigationProperty Name="LoaiXe" Relationship="Self.FK__Xe__MaLoaiXe__4F7CD00D" FromRole="Xe" ToRole="LoaiXe" />
     <NavigationProperty Name="HoaDon" Relationship="Self.ChiTietHoaDon" FromRole="Xe" ToRole="HoaDon" />
+    <Property Name="TrangThai" Type="Boolean" />
   </EntityType>
   <Association Name="FK__HoaDon__MaKhachH__52593CB8">
     <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />

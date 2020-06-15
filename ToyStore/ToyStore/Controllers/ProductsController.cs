@@ -16,9 +16,10 @@ namespace ToyStore.Controllers
         // GET: Products
         public ActionResult Index()
         {
+
             var list = (from x in _context.Xe
                         from l in _context.LoaiXe
-                        where x.MaLoaiXe == l.MaLoaiXe
+                        where x.MaLoaiXe == l.MaLoaiXe && x.TrangThai == true
                         select new ProductsViewModel
                         {
                             MaXe = x.MaXe,
@@ -51,7 +52,8 @@ namespace ToyStore.Controllers
                         TenXe = model.TenXe,
                         NamSanXuat = model.NamSanXuat,
                         MaLoaiXe = model.MaLoaiXe,
-                        Gia = model.Gia
+                        Gia = model.Gia,
+                        TrangThai = true
                     };
                     _context.Xe.Add(x);
                     _context.SaveChanges();
@@ -89,11 +91,22 @@ namespace ToyStore.Controllers
         {
             if (ModelState.IsValid)
             {
+                x.TrangThai = true;
                 _context.Entry(x).State = EntityState.Modified;
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(x);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            Xe x = _context.Xe.Find(id);
+            x.TrangThai = false;
+            _context.Entry(x).State = EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

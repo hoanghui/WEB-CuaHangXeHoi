@@ -16,6 +16,7 @@ namespace ToyStore.Controllers
         public ActionResult Index()
         {
             var list = (from hd in _context.HoaDon
+                        where hd.TrangThai == true
                         select new BillViewModel
                         {
                             MaHoaDon = hd.MaHoaDon,
@@ -44,15 +45,32 @@ namespace ToyStore.Controllers
                             HoTenKhachHang = kh.HoTenKhachHang,
                             NgaySinh = kh.NgaySinh,
                             DiaChi = kh.DiaChi,
+                            
                             DanhSachChiTiet =  chitiet.Xe.Select(p => new DetailBillViewModel() { 
                                 MaXe = p.MaXe,
                                 TenXe = p.TenXe,
+                                Gia = p.Gia,
+                                NamSanXuat = p.NamSanXuat,
                                 TenLoaiXe = _context.LoaiXe.Where(o=>o.MaLoaiXe == p.MaLoaiXe).Select(o=>o.TenLoaiXe).FirstOrDefault()
                             }).ToList()
                         }).FirstOrDefault();
             ViewBag.Quantity = 0;
-            
+            var tong = master.DanhSachChiTiet.Select(p => p.Gia).Sum();
+            var tongHoaDon = master.ThanhToan;
+            var temp = tongHoaDon - tong;
+            double thue = Double.Parse(temp.ToString());
+            ViewBag.Thue = thue;
             return View(master);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            HoaDon hd = _context.HoaDon.Find(id);
+            hd.TrangThai = false;
+            _context.Entry(hd).State = System.Data.Entity.EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -21,6 +21,7 @@ namespace EntityModels
     
         public int MaLoaiXe { get; set; }
         public string TenLoaiXe { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
     
         public virtual ICollection<Xe> Xe { get; set; }
     }

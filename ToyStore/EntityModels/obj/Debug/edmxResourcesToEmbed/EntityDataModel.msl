@@ -4,6 +4,7 @@
     <EntitySetMapping Name="HoaDon">
       <EntityTypeMapping TypeName="EntityModels.HoaDon">
         <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
           <ScalarProperty Name="NgayLapHoaDon" ColumnName="NgayLapHoaDon" />
           <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
@@ -25,6 +26,7 @@
     <EntitySetMapping Name="LoaiXe">
       <EntityTypeMapping TypeName="EntityModels.LoaiXe">
         <MappingFragment StoreEntitySet="LoaiXe">
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
           <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
         </MappingFragment>
@@ -42,6 +44,7 @@
     <EntitySetMapping Name="Xe">
       <EntityTypeMapping TypeName="EntityModels.Xe">
         <MappingFragment StoreEntitySet="Xe">
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="MaXe" ColumnName="MaXe" />
           <ScalarProperty Name="TenXe" ColumnName="TenXe" />
           <ScalarProperty Name="NamSanXuat" ColumnName="NamSanXuat" />

@@ -23,6 +23,7 @@ namespace EntityModels
         public System.DateTime NgayLapHoaDon { get; set; }
         public Nullable<double> ThanhToan { get; set; }
         public Nullable<int> MaKhachHang { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
     
         public virtual KhachHang KhachHang { get; set; }
         public virtual ICollection<Xe> Xe { get; set; }

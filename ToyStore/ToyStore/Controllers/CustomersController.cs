@@ -45,12 +45,14 @@ namespace ToyStore.Controllers
                     MaKhachHang = c.MaKhachHang,
                     HoTenKhachHang = c.HoTenKhachHang,
                     NgaySinh = c.NgaySinh,
-                    DiaChi = c.DiaChi
+                    DiaChi = c.DiaChi,
+                    TrangThai = true
                 };
                 _context.KhachHang.Add(kh);
                 _context.SaveChanges();
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Customers");
+            return View();
         }
 
         [HttpGet]
@@ -65,9 +67,10 @@ namespace ToyStore.Controllers
         {
             if (ModelState.IsValid)
             {
+                kh.TrangThai = true;
                 _context.Entry(kh).State = EntityState.Modified;
                 _context.SaveChanges();
-                return RedirectToAction("Customers");
+                return RedirectToAction("Index");
             }
             return View(kh);
         }
