@@ -211,8 +211,6 @@ C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.cs
 C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CopyComplete
 C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.dll
 C:\Users\lenovo\Desktop\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.pdb
-D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csprojAssemblyReference.cache
-D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CoreCompileInputs.cache
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\ToyStore.dll.config
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\ToyStore.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\ToyStore.pdb
@@ -342,6 +340,8 @@ D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Newtonsoft.Json.xml
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Antlr3.Runtime.pdb
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csprojAssemblyReference.cache
+D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CoreCompileInputs.cache
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CopyComplete
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.dll
 D:\TaiLieuHocTap\LTCSDL\CuaHangXeHoi_Web\WEB-CuaHangXeHoi\ToyStore\ToyStore\obj\Debug\ToyStore.pdb

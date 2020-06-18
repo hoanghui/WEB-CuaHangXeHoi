@@ -1,4 +1,5 @@
 ﻿using EntityModels;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -23,8 +24,9 @@ namespace ToyStore.Controllers
                             MaKhachHang = kh.MaKhachHang,
                             HoTenKhachHang = kh.HoTenKhachHang,
                             NgaySinh = kh.NgaySinh,
-                            DiaChi = kh.DiaChi
-                        });
+                            DiaChi = kh.DiaChi,
+                            DanhSachHoaDon = _context.HoaDon.Where(o => o.MaKhachHang == kh.MaKhachHang).Select(p=>p.MaHoaDon).Count<int>() 
+                        }) ;
             ViewBag.Quantity = 0;
             return View(list);
         }
@@ -46,7 +48,8 @@ namespace ToyStore.Controllers
                     HoTenKhachHang = c.HoTenKhachHang,
                     NgaySinh = c.NgaySinh,
                     DiaChi = c.DiaChi,
-                    TrangThai = true
+                    TrangThai = true,
+
                 };
                 _context.KhachHang.Add(kh);
                 _context.SaveChanges();

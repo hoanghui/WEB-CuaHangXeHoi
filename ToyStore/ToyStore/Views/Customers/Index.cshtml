@@ -15,6 +15,7 @@
             <th>Họ tên</th>
             <th>Ngày sinh</th>
             <th>Địa chỉ</th>
+            <th>Tổng đơn hàng đã mua</th>
             <th>Thao tác</th>
         </tr>
     </thead>
@@ -27,6 +28,7 @@
                 <td>@Html.DisplayFor(p => item.HoTenKhachHang)</td>
                 <td class="text-center">@Html.DisplayFor(p => item.NgaySinh)</td>
                 <td class="text-center">@Html.DisplayFor(p => item.DiaChi)</td>
+                <td class="text-center">@Html.DisplayFor(p => item.DanhSachHoaDon)</td>
                 <td>
                     <a href="/Customers/Edit/@item.MaKhachHang" class="btn btn-info" style="margin-right:10px">Sửa</a>
                     <a href="/Customers/Delete/@item.MaKhachHang" id="delete" class="btn btn-danger">Xóa</a>

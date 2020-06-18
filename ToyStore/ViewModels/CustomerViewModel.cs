@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,6 +19,11 @@ namespace ViewModels
         public DateTime?  NgaySinh { get; set; }
         [Display(Name = "Địa chỉ")]
         public string   DiaChi{ get; set; }
-       
+        
+        [Display(Name = "Tổng đơn hàng đã mua")]
+        public int DanhSachHoaDon { get; set; }
+
+        public int Tong { get; set; }
+
     }
 }

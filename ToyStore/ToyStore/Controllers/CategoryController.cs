@@ -16,6 +16,7 @@ namespace ToyStore.Controllers
         public ActionResult Index()
         {
             var list = (from l in _context.LoaiXe
+                        
                         where l.TrangThai == true
                         select new CategoryViewModel
                         {
